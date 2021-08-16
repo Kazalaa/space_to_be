@@ -15,6 +15,34 @@ ActiveRecord::Schema.define(version: 2021_08_16_152021) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.integer "rotation_period"
+    t.integer "diameter"
+    t.string "climate"
+    t.string "gravity"
+    t.float "surface_water"
+    t.string "terrain"
+    t.integer "population"
+    t.bigint "user_id", null: false
+    t.integer "price"
+    t.string "vehicules"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_planets_on_user_id"
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.boolean "status"
+    t.integer "price"
+    t.bigint "planet_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["planet_id"], name: "index_registrations_on_planet_id"
+    t.index ["user_id"], name: "index_registrations_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -27,4 +55,7 @@ ActiveRecord::Schema.define(version: 2021_08_16_152021) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "planets", "users"
+  add_foreign_key "registrations", "planets"
+  add_foreign_key "registrations", "users"
 end

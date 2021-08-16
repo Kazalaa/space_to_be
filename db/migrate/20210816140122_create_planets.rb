@@ -9,7 +9,6 @@ class CreatePlanets < ActiveRecord::Migration[6.0]
       t.float :surface_water
       t.string :terrain
       t.integer :population
-      t.references :user, null: false, foreign_key: true
       t.integer :price
       t.string :vehicules
 

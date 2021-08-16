@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :planets
+  namespace :owner do
+    resources :planets, :registrations, only:[ :index, :show, :new, :create ]
+  end
+  namespace :tenant do
+    resources :planets, :registrations, only:[ :index, :show, :new, :create ]
+  end
+  resources :registrations, only:[:index, :show, :new, :create]
 end

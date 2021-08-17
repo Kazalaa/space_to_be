@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :planets
+  resources :planets, only: [ :index, :show] do
+    resources :registrations, only: [ :create, :new ]
+  end
   namespace :owner do
-    resources :planets, :registrations, only:[ :index, :show, :new, :create ]
+    resources :registrations, only:[ :index, :show, :edit, :update, :destroy ]
   end
-  namespace :tenant do
-    resources :planets, :registrations, only:[ :index, :show, :new, :create ]
-  end
-  resources :registrations, only:[:index, :show, :new, :create]
+  resources :registrations, only:[ :index, :show ]
 end

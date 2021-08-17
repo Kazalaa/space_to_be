@@ -2,6 +2,6 @@
 
 <%@planets.each do |planet|%>
 <ul>
-<li><%= link_to planet.name, task_path(planet) %></li>
+<li><%= link_to planet.name, planet_path(planet) %></li>
 </ul>
 <% end %>

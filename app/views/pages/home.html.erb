@@ -1,2 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="banner-container">
+    <h1>Space To Be</h1>
+    <p>Quelle Planète vous attire ?</p>
+    <div class="button-container">
+      <%= link_to "Je m'envole", planets_path, class: "btn btn-dark btn-arrondi" %>
+    </div>
+  </div>
+</div>
+
+<div class="planets-grid container py-5">
+  <div class="planet-card" style="background-image: url('<%= image_path "tatooine.png" %>')">
+    <p>Tatooine</p>
+  </div>
+  <div class="planet-card" style="background-image: url('<%= image_path "rendition1.jpg" %>')">
+    <p>Hoth</p>
+  </div>
+  <div class="planet-card" style="background-image: url('<%= image_path "luke-skywalker-et-yoda.jpg" %>')">
+    <p>Dagobah</p>
+  </div>
+</div>
+
+<div class="description py-5 px-5" style="text-align:center; background-color:#53A3D3">
+  <h1 >Space To Be</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in
+
+cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+</div>

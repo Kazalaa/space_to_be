@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :find_booking, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def show
@@ -18,11 +18,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new(bookings_params)
     @booking.status = true
     @booking.user = current_user
-    @booking.price = "10"
     @planet = Planet.find(params[:planet_id])
+    @booking.price = (@booking.end_date - @booking.start_date) * @planet.price.to_i
     @booking.planet = @planet
     if @booking.save
-      redirect_to bookings_path
+      redirect_to booking_path(@booking)
     else
       render :new
     end

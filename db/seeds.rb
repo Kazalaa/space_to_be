@@ -11,6 +11,7 @@ require 'json'
 puts "cleaning db"
 Planet.destroy_all
 User.destroy_all
+Booking.destroy_all
 i = 1
 puts "db cleaned"
 

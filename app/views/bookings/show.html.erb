@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card p-4">
+    <h1 class='text-center pt-3'>🚀 🔥 Félicitations <%= current_user.email %> pour ta résa 🔥 🚀 </h1>
+    <span class='p-3'></span>
+    <p>N'oubliez pas vos informations de voyage</p>
+    <p>Votre date de départ: <%= @booking.start_date %></p>
+    <p>Votre date de retour: <%= @booking.end_date %></p>
+    <p>Le prix total de votre séjour est de <%= @booking.price%> palpacoins.</p>
+    <%= link_to 'Mes réservations en cours', bookings_path, class: 'btn btn-primary ' %>
+  </div>
+</div>

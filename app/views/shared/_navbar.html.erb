@@ -1,16 +1,16 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-lewagon">
   <%= link_to "/", class: "navbar-brand" do %>
-    <%= image_tag "logo.png" %>
-    <td>SpaceToBe</td>
+    <%= image_tag "logo2.png" %>
+    <span>SpaceToBe</span>
     <% end %>
 
-  <%= link_to "Devenez Hôte", owner_bookings_path, class: "btn btn-primary"%>
   <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button> %>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <%= link_to "Devenez Hôte", owner_bookings_path, class: "btn btn-light btn-hote"%>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">

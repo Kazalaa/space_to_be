@@ -16,6 +16,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(bookings_params)
+    @booking.status = true
+    @booking.user = current_user
+    @booking.price = "10"
     @planet = Planet.find(params[:planet_id])
     @booking.planet = @planet
     if @booking.save
@@ -44,7 +47,7 @@ class BookingsController < ApplicationController
   private
 
   def bookings_params
-    params.require(:bookings).permit(:status, :price)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 
   def find_booking

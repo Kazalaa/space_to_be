@@ -1,22 +1,24 @@
 class Owner::BookingsController < ApplicationController
 
   def index
-    @bookings = []
-    current_user.planets.each do |planet|
-      planet.bookings.each do |booking|
-        @bookings << booking
-      end
-    end
+    # @bookings = []
+    # current_user.planets.each do |planet|
+    #   planet.bookings.each do |booking|
+    #     @bookings << booking
+    #   end
+    # end
+    # @bookings = Booking.where(user: current_user)
+    @planets = current_user.planets
   end
 
-  def new
-    # @planet = Planet.new
-    # @booking = Booking.new
-  end
+  # def new
+  #   # @planet = Planet.new
+  #   # @booking = Booking.new
+  # end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
+  # def show
+  #   @booking = Booking.find(params[:id])
+  # end
 
   def edit
     @booking = Booking.find(params[:id])

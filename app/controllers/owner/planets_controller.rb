@@ -8,8 +8,9 @@ before_action :find_planet, only: [ :show, :edit, :update, :destroy ]
 
   def create
     @planet = Planet.new(planets_params)
+    @planet.user = current_user
     if @planet.save
-      redirect_to owner_booking_path
+      redirect_to planet_path(@planet)
     else
       render :new
     end

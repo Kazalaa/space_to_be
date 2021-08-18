@@ -1,2 +1,10 @@
 
+<% @planets.each do |planet|%>
+  <h2><%= planet.name %></h2>
+  <% planet.bookings.each do |booking| %>
+    <%= booking.price %>
+  <% end %>
+<% end %>
+
+
 <%= link_to "Ajouter une planète", new_owner_planet_path, class: "btn btn-primary" %>

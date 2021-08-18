@@ -30,6 +30,7 @@ class BookingsController < ApplicationController
 
   def edit
     # @booking = booking.find(params[:id])
+    @planet = @booking.planet
   end
 
   def update

@@ -8,7 +8,9 @@
             <div class="card-trip-infos">
               <div>
                 <h2><%= booking.planet.name %> </h2>
-                <p>Obtenir plus d'informations sur votre future destination</p>
+                <p><strong>Du</strong> <%= booking.start_date %></p>
+                <p><strong>au</strong> <%= booking.end_date %></p>
+                <%= link_to 'modifier 🚀', edit_booking_path(booking), class: "btn btn-primary rounded" %>
               </div>
               <h2 class="card-trip-pricing"> <%= booking.price %> 🪙</h2>
               <img src="https://kitt.lewagon.com/placeholder/users/melitapis" class="card-trip-user avatar-bordered" />

@@ -9,6 +9,11 @@ class Owner::BookingsController < ApplicationController
     end
   end
 
+  def new
+    # @planet = Planet.new
+    # @booking = Booking.new
+  end
+
   def show
     @booking = Booking.find(params[:id])
   end

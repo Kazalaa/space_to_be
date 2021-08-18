@@ -9,3 +9,5 @@
 <p><%= @planet.population %></p>
 
 <button><%= link_to "retour", planets_path %></button>
+
+<%= link_to 'rent this planet', new_planet_booking_path(@planet)  %>

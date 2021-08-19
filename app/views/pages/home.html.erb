@@ -33,21 +33,15 @@
 
 <div class="search-container">
   <%= form_tag planets_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Planète"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-<%= form_tag planets_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Planète"
-  %>
-<% end %>
-
+    <div class="d-flex justify-content-center my-5">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Planète"
+      %>
+      <%= submit_tag "Search", class: "btn btn-dark search-btn ml-3" %>
+    </div>
+  <% end %>
 </div>
 
 <div class="sub-title">

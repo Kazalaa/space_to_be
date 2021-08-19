@@ -1,5 +1,5 @@
 .footer {
-  background: #A4CFE7;
+  background: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,8 +12,8 @@
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: white;
+  opacity: 0.7;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
@@ -21,10 +21,20 @@
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
-  color: #D23333;
-}
 
 img {
-  width: 100px;
+  width: 30px;
+  border-radius: 5px;
+}
+.footer-brand {
+  font-weight: bold;
+  .jedi-star {
+    font-family: "Star Jedi";
+    color: white;
+    font-size: 26px;
+    vertical-align: middle;
+  }
+  .footer-logo {
+    width: 90px;
+  }
 }

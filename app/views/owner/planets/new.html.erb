@@ -1,7 +1,8 @@
-<div class="container">
+<div class="container-new">
 
-<h1 class='text-center'>New planet</h1>
-<%= simple_form_for [:owner, @planet] do |f| %>
+<h1 class='text-center title-new'>New planet</h1>
+<div class="form-new-planet">
+<%= simple_form_for [:owner, @planet], :html=> { class: 'foobarbaz' } do |f| %>
   <%= f.input :name, label: 'Nom', placeholder: 'le nom de la planete' %>
   <%= f.input :price, label: 'Tarif de location journalier', hint: "Le prix doit être affiché en Palpacoins" %>
   <%= f.input :rotation_period, label: 'Période de rotation', placeholder: 'le nombre de jour avant la rotation complète autour du soleil de votre planète' %>
@@ -10,12 +11,13 @@
   <%= f.input :gravity, label: 'Gravité', placeholder: 'champ de pesanteur exprimé en "g", 9,87 pour la Terre' %>
   <%= f.input :terrain, label: 'Terrain', placeholder: 'type de terrains, séparés par des virgules' %>
   <%= f.input :surface_water, label: 'Surface en eau', placeholder: "le % de surface d'eau" %>
-  <%= f.input :population, label: 'Population', placeholder: "le nombre d'habitants de votre planete" %>
+  <%= f.input :population, label: 'Population', placeholder: "le nombre d'habitants de votre planete", class: "testest" %>
   <%= f.input :photo, as: :file %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
-
 <%= link_to "retour", owner_bookings_path, class: 'btn btn-primary mt-1' %>
+</div>
+
 
 
 </div>

@@ -1,19 +1,26 @@
+
 <div class="navbar navbar-expand-sm navbar-lewagon">
-  <%= link_to "/", class: "navbar-brand" do %>
+  <%= link_to "/", class: "navbar-brand ml-2" do %>
     <%= image_tag "logo2.png" %>
-    <span class="jedi-star">SpaceToBe</span>
+    <span class="jedi-star ml-4 p">SpaceToBe</span>
+
     <% end %>
 
   <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button> %>
 
+  <div>
+    <%= link_to "/planets", class: "all-planets" do %>
+      <span>Toutes nos planètes</span>
+    <% end %>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <%= link_to "Devenez Hôte", owner_bookings_path, class: "btn-hote"%>
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-2 mx-3">
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item active mx-3">
           <%= link_to "Home", "/", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">

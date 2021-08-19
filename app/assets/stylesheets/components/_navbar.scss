@@ -1,10 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: black;
-  // position:fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   .btn-hote {
     border-radius: 18px;
     background-image: linear-gradient(#FF784A, #F1CB4C);
@@ -30,9 +30,21 @@
 
 .navbar-brand {
   font-weight: bold;
+
   .jedi-star {
     font-family: "Star Jedi";
     color: white;
     font-size: 26px;
+    vertical-align: middle;
   }
 }
+.all-planets {
+  color: #6c757d;
+}
+.all-planets:hover {
+  text-decoration: none;
+  color: #6c757d;
+
+}
+
+

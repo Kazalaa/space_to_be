@@ -1,13 +1,61 @@
 <div class="banner">
   <div class="banner-container">
-    <h1>Space To Be</h1>
-    <p>Quelle Planète vous attire ?</p>
-    <div class="button-container">
-      <%= link_to "Je m'envole", planets_path, class: "btn btn-dark btn-arrondi" %>
+    <h1>Quelle Planète vous attire ?</h1>
+    <div class="container-carroussel">
+
+      <div id="planet1" class="planet">
+        <img src="https://images.vexels.com/media/users/3/152536/isolated/preview/401b51c3a9098f12b566121c92009877-mars-planet-icon-by-vexels.png">
+        <h3>MARS</h3>
+      </div>
+
+      <div id="planet2" class="planet">
+        <img src="https://images.vexels.com/media/users/3/152680/isolated/preview/22e162e0d0066ad0881e1ee797574680-uranus-planet-icon-by-vexels.png">
+        <h3>URANUS</h3>
+      </div>
+
+      <div id="planet3" class="planet">
+        <img src="https://images.vexels.com/media/users/3/152509/isolated/preview/e058e7f53d319e0628763c70ab7dce14-jupiter-planet-icon-by-vexels.png">
+        <h3>JUPITER</h3>
+      </div>
+
+      <div id="planet4" class="planet">
+        <img src="https://images.vexels.com/media/users/3/152682/isolated/preview/5b39c67c9cc377e9da05af2d9d54b6dc-venus-planet-icon.png">
+        <h3>VENUS</h3>
+      </div>
+
+      <div id="planet5" class="planet">
+        <img src="https://images.vexels.com/media/users/3/152570/isolated/preview/425035eea8f0d97015ac66c6763d58e8-neptune-planet-icon.png">
+        <h3>NEPTUNE</h3>
+      </div>
     </div>
   </div>
 </div>
 
+<div class="search-container">
+  <%= form_tag planets_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Planète"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+<%= form_tag planets_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Planète"
+  %>
+<% end %>
+
+</div>
+
+<div class="sub-title">
+  <h1>Pour les vrais Jedis</h1>
+  <p>Decouvrez nos meilleures destinations</p>
+</div>
+
+<div class="sabre">
 <div class="planets-grid container py-5">
   <div class="planet-card" style="background-image: url('<%= image_path "tatooine.png" %>')">
     <p>Tatooine</p>
@@ -19,12 +67,70 @@
     <p>Dagobah</p>
   </div>
 </div>
+<div class="sabre-laser">
+  </div>
+</div>
 
-<div class="description py-5 px-5" style="text-align:center; background-color:#53A3D3">
-  <h1 >Space To Be</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in
+<div class="sub-title">
+  <h1>Ils nous font confiance</h1>
+  <p>Les avis de nos voyageurs</p>
+</div>
 
-cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+<div class="commentaries-grid py-5">
+
+  <div class="commentary-card">
+    <div class="commentary-text">
+      <h2>Anakin Skywalker</h2>
+      <p>Il fait trop froid les bras m’en tombent</p>
+    </div>
+    <div class="commentary-reviews">
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+  </div>
+
+  <div class="commentary-card">
+    <div class="commentary-text">
+      <h2>Chewbacca</h2>
+      <p>Gggrrrrrrrrrrrrrrr</p>
+    </div>
+    <div class="commentary-reviews">
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+  </div>
+
+  <div class="commentary-card">
+    <div class="commentary-text">
+      <h2>Yoda</h2>
+      <p>Du plaisir j’ai pris, a barboter avec le petit nouveau</p>
+    </div>
+    <div class="commentary-reviews">
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+    </div>
+  </div>
+
+  <div class="commentary-card">
+    <div class="commentary-text">
+      <h2>Princesse Leïa</h2>
+      <p>J’ai adoré le bain de soleil</p>
+    </div>
+    <div class="commentary-reviews">
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+      <i class="fas fa-star yellow-star"></i>
+    </div>
+  </div>
 </div>

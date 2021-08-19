@@ -1,16 +1,18 @@
 
 <div class="container" id="background-img">
-<div class="card p-3">
-  <h1 class='text-center'>Aujourd'hui on va direction ...</h1>
+<div class="card-index p-3" >
+  <h1 class='text-center mt-3'>Aujourd'hui on va direction ...</h1>
 
-  <div class='d-flex'>
+  <div class="search-container-index">
     <%= form_tag planets_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control input-group",
-      placeholder: "Find a planet"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+      <div class="d-flex justify-content-center my-3">
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control input-group",
+          placeholder: "Trouver une planète"
+        %>
+        <%= submit_tag "Search", class: "btn btn-dark search-btn-index ml-3" %>
+      </div>
     <% end %>
   </div>
   </div>

@@ -1,11 +1,18 @@
 
 #background-img{
- background-image: image-url("backgroung.jpeg");
+ background-image: image-url("backgroung.jpg");
  background-position: center;
  height: auto ;
+ width: 100%;
  //max-width: 100%;
  background-size: contain;
 }
+
+.card-index {
+  background-color: none;
+  color: white;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;

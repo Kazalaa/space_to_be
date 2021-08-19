@@ -28,6 +28,9 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
+        <div class="user-name ml-3 mt-3">
+          <p class="user">Bienvenue, <br><%= current_user.email %></p>
+        </div>
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>

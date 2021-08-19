@@ -36,7 +36,7 @@
             <%= booking.end_date %>
             <%= link_to "Modifier", owner_booking_path(booking), class: "btn btn-primary" %>
             <%= link_to "Supprimer",
-            owner_bookings_path,
+            owner_booking_path(booking),
             method: :delete,
             data: { confirm: "Êtes vous sur?" },
             class: 'btn btn-danger' %>

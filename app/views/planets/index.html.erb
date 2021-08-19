@@ -1,24 +1,27 @@
-<div class="container">
-  <div class="search-planet-container p-3">
-    <h1 class='text-center'>Aujourd'hui on va direction ...</h1>
-    <div class="search-index-container">
-      <%= form_tag planets_path, method: :get do %>
-        <div class="d-flex justify-content-center my-5">
-          <%= text_field_tag :query,
-          params[:query],
-          class: "form-control input-group",
-          placeholder: "Trouver une planète"
-          %>
-          <%= submit_tag "Search", class: "btn btn-dark search-btn-index ml-3" %>
-        </div>
-      <% end %>
-    </div>
+
+<div class="container" id="background-img">
+<div class="card p-3">
+  <h1 class='text-center'>Aujourd'hui on va direction ...</h1>
+
+  <div class='d-flex'>
+    <%= form_tag planets_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control input-group",
+      placeholder: "Find a planet"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
   </div>
   <div class ="cards container py-5"  id= "color-planet-link">
     <%@planets.each do |planet| %>
-      <div class= "cards-trip" style="background-image: url(https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80)">
-        <p><%= link_to planet.name, planet_path(planet) %></p>
+      <div class= "cards-trip" style="background-image: url('<%= cl_image_path planet.photo.key, height: 300, crop: :fill %>')">
+      <p><%= link_to planet.name, planet_path(planet) %></p>
       </div>
     <% end %>
+    </div>
   </div>
-</div>
+  </div>
+   </div>
+    </div>

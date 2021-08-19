@@ -1,20 +1,21 @@
-<h1>New planet</h1>
-<ul>
+<div class="container">
 
+<h1 class='text-center'>New planet</h1>
 <%= simple_form_for [:owner, @planet] do |f| %>
-   <%= f.input :name, label: 'le nom de la planete' %>
-  <%= f.input :price, hint: "price should be in Palpacoin" %>
-  <%= f.input :rotation_period %>
-  <%= f.input :diameter %>
-  <%= f.input :climate %>
-  <%= f.input :gravity %>
-  <%= f.input :terrain %>
-  <%= f.input :surface_water %>
-  <%= f.input :population %>
-
+  <%= f.input :name, label: 'Nom', placeholder: 'le nom de la planete' %>
+  <%= f.input :price, label: 'Tarif de location journalier', hint: "Le prix doit être affiché en Palpacoins" %>
+  <%= f.input :rotation_period, label: 'Période de rotation', placeholder: 'le nombre de jour avant la rotation complète autour du soleil de votre planète' %>
+  <%= f.input :diameter, label: 'Diamètre', placeholder: 'le diamètre en mètre' %>
+  <%= f.input :climate, label: 'Climat', placeholder: 'type de climats principaux, séparés par des virgules' %>
+  <%= f.input :gravity, label: 'Gravité', placeholder: 'champ de pesanteur exprimé en "g", 9,87 pour la Terre' %>
+  <%= f.input :terrain, label: 'Terrain', placeholder: 'type de terrains, séparés par des virgules' %>
+  <%= f.input :surface_water, label: 'Surface en eau', placeholder: "le % de surface d'eau" %>
+  <%= f.input :population, label: 'Population', placeholder: "le nombre d'habitants de votre planete" %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit, class: "btn btn-primary" %>
-
 <% end %>
 
-<button><%= link_to "retour", owner_bookings_path %></button>
-</ul>
+<%= link_to "retour", owner_bookings_path, class: 'btn btn-primary mt-1' %>
+
+
+</div>

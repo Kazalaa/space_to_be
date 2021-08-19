@@ -1,7 +1,18 @@
-<h1>Hello planet</h1>
+<div class="container">
+  <h1 class='text-center'>Hello planet</h1>
+  <div class='d-flex'>
+    <%= form_tag planets_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control input-group",
+      placeholder: "Find a planet"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 
-<%@planets.each do |planet|%>
-<ul>
-<li><%= link_to planet.name, planet_path(planet) %></li>
-</ul>
-<% end %>
+  <%@planets.each do |planet|%>
+    <p><%= link_to planet.name, planet_path(planet) %></p>
+  <% end %>
+
+</div>

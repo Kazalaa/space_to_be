@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.main-container {
+  margin-top: 90px;
+  min-height: 78.5vh;
+}

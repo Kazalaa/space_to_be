@@ -16,7 +16,9 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 // $my-font: "Font Name";
 @font-face {
   font-family: "Star Jedi";
-  src: font-url('/font-url/Starjedi.ttf') format('truetype')
+
+  src: url('Starjedi.ttf') format('truetype')
+
 }
 $star-jedi: "Star Jedi";
 

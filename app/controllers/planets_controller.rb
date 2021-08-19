@@ -3,7 +3,11 @@ skip_before_action :authenticate_user!, only: [ :index, :show ]
 before_action :find_planet, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @planets = Planet.all
+    if params[:query].present?
+      @planets = Planet.search_by_name_and_terrain(params[:query])
+    else
+      @planets = Planet.all
+    end
   end
 
   def show
@@ -42,7 +46,7 @@ before_action :find_planet, only: [ :show, :edit, :update, :destroy ]
   private
 
   def planets_params
-    params.require(:planets).permit(:name, :rotation_period, :diameter, :climate, :gravity, :terrain, :surface_water, :population, :price)
+    params.require(:planets).permit(:name, :rotation_period, :diameter, :climate, :gravity, :terrain, :surface_water, :population, :price, :photo)
   end
 
   def find_planet

@@ -13,6 +13,7 @@ body {
 }
 
 .container-carroussel {
+  margin-bottom: 200px;
   width: 70vw;
   max-width: 300px;
   text-align: center;
@@ -28,7 +29,7 @@ body {
   align-items: center;
 }
 
-img {
+.width-planet {
   max-width: 100%;
   max-height: 100%;
   cursor: pointer;

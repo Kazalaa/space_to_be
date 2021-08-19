@@ -46,45 +46,45 @@ import { gsap } from "gsap";
 function centerPlanet1() {
   const tl = gsap.timeline();
   tl.to("#planet1", 1, { xPercent: 0, yPercent: 0, z: 1 }, 0)
-  tl.to("#planet2", 1, { xPercent: 80, yPercent: -50, z: -600 }, 0);
-  tl.to("#planet3", 1, { xPercent: 70, yPercent: -200, z: -1500 }, 0)
-  tl.to("#planet4", 1, { xPercent: 1 - 70, yPercent: -200, z: -1500 }, 0);
-  tl.to("#planet5", 1, { xPercent: -80, yPercent: -50, z: -600 }, 0)
+  tl.to("#planet2", 1, { xPercent: 140, yPercent: -60, z: -800 }, 0);
+  tl.to("#planet3", 1, { xPercent: 90, yPercent: -200, z: -2000 }, 0)
+  tl.to("#planet4", 1, { xPercent: 1 - 90, yPercent: -200, z: -2000 }, 0);
+  tl.to("#planet5", 1, { xPercent: -140, yPercent: -60, z: -800 }, 0)
 }
 
 function centerPlanet2() {
   var tl = gsap.timeline();
-  tl.to("#planet1", 1, { xPercent: -80, yPercent: -50, z: -600 }, 0)
+  tl.to("#planet1", 1, { xPercent: -140, yPercent: -60, z: -800 }, 0)
   tl.to("#planet2", 1, { xPercent: 0, yPercent: 0, z: 1 }, 0)
-  tl.to("#planet3", 1, { xPercent: 80, yPercent: -50, z: -600 }, 0);
-  tl.to("#planet4", 1, { xPercent: 70, yPercent: -200, z: -1500 }, 0)
-  tl.to("#planet5", 1, { xPercent: 1 - 70, yPercent: -200, z: -1500 }, 0);
+  tl.to("#planet3", 1, { xPercent: 140, yPercent: -60, z: -800 }, 0);
+  tl.to("#planet4", 1, { xPercent: 90, yPercent: -200, z: -2000 }, 0)
+  tl.to("#planet5", 1, { xPercent: 1 - 90, yPercent: -200, z: -2000 }, 0);
 }
 
 function centerPlanet3() {
   var tl = gsap.timeline();
-  tl.to("#planet1", 1, { xPercent: 1 - 70, yPercent: -200, z: -1500 }, 0);
-  tl.to("#planet2", 1, { xPercent: -80, yPercent: -50, z: -600 }, 0)
+  tl.to("#planet1", 1, { xPercent: 1 - 90, yPercent: -200, z: -2000 }, 0);
+  tl.to("#planet2", 1, { xPercent: -140, yPercent: -60, z: -800 }, 0)
   tl.to("#planet3", 1, { xPercent: 0, yPercent: 0, z: 1 }, 0);
-  tl.to("#planet4", 1, { xPercent: 80, yPercent: -50, z: -600 }, 0);
-  tl.to("#planet5", 1, { xPercent: 70, yPercent: -200, z: -1500 }, 0);
+  tl.to("#planet4", 1, { xPercent: 140, yPercent: -60, z: -800 }, 0);
+  tl.to("#planet5", 1, { xPercent: 90, yPercent: -200, z: -2000 }, 0);
 }
 
 function centerPlanet4() {
   var tl = gsap.timeline();
-  tl.to("#planet1", 1, { xPercent: 70, yPercent: -200, z: -1500 }, 0);
-  tl.to("#planet2", 1, { xPercent: 1 - 70, yPercent: -200, z: -1500 }, 0);
-  tl.to("#planet3", 1, { xPercent: -80, yPercent: -50, z: -600 }, 0)
+  tl.to("#planet1", 1, { xPercent: 90, yPercent: -200, z: -2000 }, 0);
+  tl.to("#planet2", 1, { xPercent: 1 - 90, yPercent: -200, z: -2000 }, 0);
+  tl.to("#planet3", 1, { xPercent: -140, yPercent: -60, z: -800 }, 0)
   tl.to("#planet4", 1, { xPercent: 0, yPercent: 0, z: 1 }, 0);
-  tl.to("#planet5", 1, { xPercent: 80, yPercent: -50, z: -600 }, 0);
+  tl.to("#planet5", 1, { xPercent: 140, yPercent: -60, z: -800 }, 0);
 }
 
 function centerPlanet5() {
   var tl = gsap.timeline();
-  tl.to("#planet1", 1, { xPercent: 80, yPercent: -50, z: -600 }, 0);
-  tl.to("#planet2", 1, { xPercent: 70, yPercent: -200, z: -1500 }, 0);
-  tl.to("#planet3", 1, { xPercent: 1 - 70, yPercent: -200, z: -1500 }, 0);
-  tl.to("#planet4", 1, { xPercent: -80, yPercent: -50, z: -600 }, 0)
+  tl.to("#planet1", 1, { xPercent: 140, yPercent: -60, z: -800 }, 0);
+  tl.to("#planet2", 1, { xPercent: 90, yPercent: -200, z: -2000 }, 0);
+  tl.to("#planet3", 1, { xPercent: 1 - 90, yPercent: -200, z: -2000 }, 0);
+  tl.to("#planet4", 1, { xPercent: -140, yPercent: -60, z: -800 }, 0)
   tl.to("#planet5", 1, { xPercent: 0, yPercent: 0, z: 1 }, 0);
 }
 

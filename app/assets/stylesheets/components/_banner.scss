@@ -1,20 +1,22 @@
 .banner {
-  // background-image: url("../../assets/images/spacetobe-banner.jpeg");
-  background-image: image-url("spacetobe-banner.jpeg");
+  background-color: black;
   text-align: center;
   display: flex;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   justify-content: center;
-  padding-left: 22%;
   height: 80vh;
   width: 100%;
   color: black;
-  flex-direction: column;
+
+  .banner-container{
+    width: 80% !important;
+  }
   h1 {
-    font-size: 66px;
-    font-weight: bold;
+    font-family: 'Star Jedi';
+    font-size: 48px;
+    color: white;
   }
   p {
     font-size: 36px;

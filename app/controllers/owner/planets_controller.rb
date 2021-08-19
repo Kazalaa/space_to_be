@@ -29,7 +29,7 @@ before_action :find_planet, only: [ :show, :edit, :update, :destroy ]
   def destroy
     # @planet = Planet.find(params[:id])
     @planet.destroy
-    redirect_to planets_path
+    redirect_to owner_bookings_path
   end
 
   private

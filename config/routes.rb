@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   namespace :owner do
     resources :bookings, only:[ :index, :show, :edit, :update, :destroy ]
-    resources :planets, only:[ :new, :create ]
+    resources :planets, only:[ :new, :create, :destroy, :edit, :update ]
   end
   resources :bookings, only:[ :index, :show, :edit, :update, :destroy ]
 end

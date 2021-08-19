@@ -1,22 +1,20 @@
 <div class="container">
-  <div class="card p-3">
-    <h1 class="text-center"> ☄️ Mes réservations ☄️</h1>
-      <div class="cards">
-        <% @bookings.each do |booking| %>
-          <div class="card-trip">
-            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" />
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= booking.planet.name %> </h2>
-                <p><strong>Du</strong> <%= booking.start_date %></p>
-                <p><strong>au</strong> <%= booking.end_date %></p>
-                <%= link_to 'modifier 🚀', edit_booking_path(booking), class: "btn btn-primary rounded" %>
-              </div>
-              <h2 class="card-trip-pricing"> <%= booking.price %> 🪙</h2>
-              <img src="https://kitt.lewagon.com/placeholder/users/melitapis" class="card-trip-user avatar-bordered" />
-            </div>
+  <h1 class="text-center" style="color: white"> ☄️ Mes réservations ☄️</h1>
+  <div class="cards">
+    <% @bookings.each do |booking| %>
+      <div class="card-trip">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= booking.planet.name %> </h2>
+            <p><strong>Du</strong> <%= booking.start_date %></p>
+            <p><strong>au</strong> <%= booking.end_date %></p>
+            <%= link_to 'modifier 🚀', edit_booking_path(booking), class: "btn btn-primary rounded" %>
           </div>
-        <% end %>
+          <h2 class="card-trip-pricing"> <%= booking.price %> 🪙</h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/melitapis" class="card-trip-user avatar-bordered" />
+        </div>
       </div>
+    <% end %>
   </div>
 </div>

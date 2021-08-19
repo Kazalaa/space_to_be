@@ -1,8 +1,9 @@
 // CSS pour les card du dashboard user qui souhaite voir ses réservations
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap: 40px;
+  margin-top: 30px;
 }
 
 .card-trip {
@@ -44,6 +45,7 @@
   top: -20px;
   width: 40px;
 }
+
 
 
 // Smallest device

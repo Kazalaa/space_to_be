@@ -3,7 +3,11 @@ skip_before_action :authenticate_user!, only: [ :index, :show ]
 before_action :find_planet, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @planets = Planet.all
+    if params[:query].present?
+      @planets = Planet.search_by_name_and_terrain(params[:query])
+    else
+      @planets = Planet.all
+    end
   end
 
   def show

@@ -35,7 +35,7 @@ before_action :find_planet, only: [ :show, :edit, :update, :destroy ]
   private
 
   def planets_params
-    params.require(:planet).permit(:name, :rotation_period, :diameter, :climate, :gravity, :terrain, :surface_water, :population, :price)
+    params.require(:planet).permit(:name, :rotation_period, :diameter, :climate, :gravity, :terrain, :surface_water, :population, :price, :photo)
   end
 
   def find_planet

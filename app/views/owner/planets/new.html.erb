@@ -1,21 +1,24 @@
-<div class="container">
+<div class="container-new">
+<h1 class='text-center title-new'>New planet</h1>
 
-<h1 class='text-center'>New planet</h1>
-<%= simple_form_for [:owner, @planet] do |f| %>
-  <%= f.input :name, label: 'Nom', placeholder: 'le nom de la planete' %>
-  <%= f.input :price, label: 'Tarif de location journalier', hint: "Le prix doit être affiché en Palpacoins" %>
-  <%= f.input :rotation_period, label: 'Période de rotation', placeholder: 'le nombre de jour avant la rotation complète autour du soleil de votre planète' %>
-  <%= f.input :diameter, label: 'Diamètre', placeholder: 'le diamètre en mètre' %>
-  <%= f.input :climate, label: 'Climat', placeholder: 'type de climats principaux, séparés par des virgules' %>
-  <%= f.input :gravity, label: 'Gravité', placeholder: 'champ de pesanteur exprimé en "g", 9,87 pour la Terre' %>
-  <%= f.input :terrain, label: 'Terrain', placeholder: 'type de terrains, séparés par des virgules' %>
-  <%= f.input :surface_water, label: 'Surface en eau', placeholder: "le % de surface d'eau" %>
-  <%= f.input :population, label: 'Population', placeholder: "le nombre d'habitants de votre planete" %>
+<div class="container-new-planet">
+
+<%= simple_form_for [:owner, @planet], class: "form-center" do |f| %>
+  <%= f.input :name, label: 'Nom', placeholder: 'Nom de la planète' %>
+  <%= f.input :price, label: 'Tarif de location journalier', placeholder: "En Palpacoins" %>
+  <%= f.input :rotation_period, label: 'Période de rotation', placeholder: 'En jours' %>
+  <%= f.input :diameter, label: 'Diamètre', placeholder: 'En mètre' %>
+  <%= f.input :climate, label: 'Climat', placeholder: 'Tropical, tempéré, océanique ...' %>
+  <%= f.input :gravity, label: 'Gravité', placeholder: 'En "g" '%>
+  <%= f.input :terrain, label: 'Terrain', placeholder: 'Glaciers, montagnes, déserts ...' %>
+  <%= f.input :surface_water, label: 'Surface en eau', placeholder: "En %" %>
+  <%= f.input :population, label: 'Population', placeholder: "Nombre d'habitants" %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn-create-planet" %>
 <% end %>
 
-<%= link_to "retour", owner_bookings_path, class: 'btn btn-primary mt-1' %>
+<%= link_to "retour", owner_bookings_path, class: 'btn btn-primary mt-5 mb-5' %>
 
 
+</div>
 </div>

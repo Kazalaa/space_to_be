@@ -3,10 +3,24 @@ skip_before_action :authenticate_user!, only: [ :index, :show ]
 before_action :find_planet, only: [ :show, :edit, :update, :destroy ]
 
   def index
+
+    # @climate_array = []
+    # Planet.all.each do |planet|
+    #   @climate_array << planet.climate unless @climate_array.include?(planet.climate)
+    # end
+
     if params[:query].present?
       @planets = Planet.search_by_name_and_terrain(params[:query])
     else
       @planets = Planet.all
+
+      # if params[:planet_filters].present?
+      #   climate_filter = params[:planet_filters][:climate]
+      #   @planets = @planets.where(climate: climate_filter) unless climate_filter.empty?
+
+      #   max_price_filter = params[:planet_filters][:max_price]
+      #   @planets = @planets.where("planets.price <= :query ", query: max_price_filter) unless max_price_filter.empty?
+      # end
     end
   end
 

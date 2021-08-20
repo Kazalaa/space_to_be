@@ -59,7 +59,7 @@ puts "user created"
   surface_water: pages['surface_water'],
   terrain: pages['terrain'],
   population: pages['population'],
-  price: pages['orbital_period'],
+  price: (10..100).to_a.sample,
   user: user1)
   planet.photo.attach(io: file, filename: "planet", content_type: 'image/jpg')
    i += 1

@@ -16,8 +16,19 @@
     <% end %>
   </div>
   </div>
+
+  <%
+=begin%>
+ <%= simple_form_for :planet_filters, method: :get do |f| %>
+    <%= f.input :climate, label: 'Climat', collection: @climate_array  %>
+    0 <%= f.input :max_price, label: 'Prix max', as: :range %> 100
+    <%= f.submit 'Filtrer', class: "btn btn-primary" %>
+  <% end %>
+<%
+=end%>
+
   <div class ="cards container py-5"  id= "color-planet-link">
-    <%@planets.each do |planet| %>
+    <% @planets.each do |planet| %>
       <div class= "cards-trip" style="background-image: url('<%= cl_image_path planet.photo.key, height: 300, crop: :fill %>')">
       <p><%= link_to planet.name, planet_path(planet) %></p>
       </div>

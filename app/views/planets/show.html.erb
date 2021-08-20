@@ -1,18 +1,22 @@
-<div class="container">
-  <div class="card text-center m-5 p-3">
-    <%= cl_image_tag(@planet.photo.key) %>
-    <div class="show-details">
-      <h2><%= @planet.name %></h2>
-      <p><%= @planet.price %></p>
-      <p><%= @planet.rotation_period %></p>
-      <p><%= @planet.diameter %></p>
-      <p><%= @planet.climate %></p>
-      <p><%= @planet.gravity %></p>
-      <p><%= @planet.terrain %></p>
-      <p><%= @planet.surface_water %></p>
-      <p><%= @planet.population %></p>
-      <%= link_to "retour", planets_path, class: 'btn' %>
-      <%= link_to 'Louer cette planète', new_planet_booking_path(@planet), class: 'btn'  %>
+
+<div id="background-img">
+  <<div class="show-container">
+   <%= cl_image_tag(@planet.photo.key, width: 500, height: 500, crop: :fill, class: "show-planet-img") %>
+    <div class=" text-center m-5 p-3 show-details-cards ">
+        <div class="show-details ">
+          <h2><%= @planet.name %>  </h2>
+          <p>Prix/Jour:<%= @planet.price %> $Palpacoins</p>
+          <p> Rotation:<%= @planet.rotation_period %></p>
+          <p> Diamètre:<%= @planet.diameter %></p>
+          <p> Climat:<%= @planet.climate %></p>
+          <p>Gravité:<%= @planet.gravity %></p>
+          <p>Terrain :<%= @planet.terrain %></p>
+          <p>Surface de l'eau:<%= @planet.surface_water %></p>
+          <p>Population: <%= @planet.population %></p>
+
+          <%= link_to "retour", planets_path, class: 'btn' %>
+          <%= link_to 'Louer cette planète', new_planet_booking_path(@planet), class: 'btn'  %>
+        </div>
     </div>
   </div>
 </div>

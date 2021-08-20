@@ -1,0 +1,58 @@
+.dashboard {
+  background-image: url("http://cdn.spacetelescope.org/archives/images/screen/heic1905a.jpg");
+  height: 80vh;
+  margin-top: 20px;
+  background-position: center;
+}
+
+.dashboard>h1 {
+  color: white;
+}
+
+.owner-planets>h3 {
+  font-family: 'work sans';
+  color: black;
+}
+
+.owner-bookings>h3 {
+  font-family: 'work sans';
+  color: black;
+}
+
+.owner-bookings {
+  opacity: 0.84;
+  background-color: rgb(240, 240, 240);
+}
+
+.owner-planets {
+  opacity: 0.84;
+  background-color: rgb(240, 240, 240);
+  align-items: center;
+}
+
+
+ .btn-dashboard {
+	box-shadow: 4px 6px 7px 2px #e3d324;
+	background:linear-gradient(to bottom, #edb817 5%, #de8435 100%);
+	background-color:#edb817;
+	border-radius:27px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'work sans';
+	font-size:18px;
+  text-align: center;
+	padding: 6px;
+	text-decoration:none;
+	text-shadow:2px 2px 3px #ffffff;
+  width: 300px;
+  margin: 10px;
+}
+.btn-dashboard:hover {
+	background:linear-gradient(to bottom, #de8435 5%, #edb817 100%);
+	background-color:#de8435;
+}
+.btn-dashboard:active {
+	position:relative;
+	top:1px;
+}

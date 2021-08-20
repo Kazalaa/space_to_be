@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container dashboard pt-2">
   <h1 class='text-center'>Dashboard Hôte</h1>
   <div class="div d-flex justify-content-between">
     <div class="div owner-planets card m-3 p-4 d-flex flex-column">
@@ -6,43 +6,60 @@
 
         <% @planets.each do |planet|%>
           <div class="card-product m-2">
-              <%= cl_image_tag planet.photo.key, height: 300, width: 400, crop: :fill %>
-            <div class="card-product-infos">
-              <h2><%= planet.name.upcase %></h2>
-              <% if  planet.bookings.empty? %>
-              <%= 'Planète disponible à la  réservation' %>
-              <% else %>
-              <%= 'Planète en cours de réservation' %>
-              <% end %>
-              <%= link_to "Détruire",
-                  owner_planet_path(planet),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" },
-                  class: 'btn btn-danger'%>
-            </div>
+              <%= cl_image_tag planet.photo.key, height: 400, width: 400, crop: :fill %>
+              <div class="card-product-infos">
+                <h2><%= planet.name.upcase %></h2>
+                <% if  planet.bookings.empty? %>
+                <%= 'Planète disponible à la  réservation' %>
+                <% else %>
+                <%= 'Planète en cours de réservation' %>
+                <% end %>
+                <%= link_to "Détruire",
+                    owner_planet_path(planet),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" },
+                    class: 'btn btn-danger'%>
+               </div>
           </div>
-      <% end %>
-      <%= link_to "Ajouter une planète", new_owner_planet_path, class: "btn btn-primary" %>
+        <% end %>
+      <%= link_to "Ajouter une planète", new_owner_planet_path, class: "btn-dashboard" %>
     </div>
 
-    <div class="div card m-3 p-4 d-flex flex-column justify-content-between">
+    <div class="div card owner-bookings m-3 p-4 d-flex flex-column">
       <h3 class='text-center'>Mes réservations en cours</h3>
-      <div class="data-card">
+
+      <div class="card-product m-2">
         <% @planets.each do |planet|%>
           <% planet.bookings.each do |booking| %>
-            <%= booking.planet.name %>
-            <%= booking.price %>
-            <%= booking.start_date %>
-            <%= booking.end_date %>
-            <%= link_to "Modifier", owner_booking_path(booking), class: "btn btn-primary" %>
+          <div class="card-product d-flex">
+            <%= cl_image_tag booking.planet.photo.key, height: 400, width: 400, crop: :fill %>
+            <div class="div">
+              <p>Planète</p>
+              <%= booking.planet.name.upcase %>
+            </div>
+            <div class="div">
+              <p>Revenu</p>
+              <%= booking.price %>
+            </div>
+            <div class="div">
+              <p>Du</p>
+              <%= booking.start_date %>
+            </div>
+            <div class="div">
+              <p>Au</p>
+              <%= booking.end_date %>
+            </div>
+            <%= link_to "Modifier", owner_booking_path(booking), class: "btn" %>
             <%= link_to "Supprimer",
             owner_booking_path(booking),
             method: :delete,
             data: { confirm: "Êtes vous sur?" },
-            class: 'btn btn-danger' %>
+            class: 'btn' %>
           <% end %>
         <% end %>
       </div>
+    </div>
+
     </div>
 
   </div>

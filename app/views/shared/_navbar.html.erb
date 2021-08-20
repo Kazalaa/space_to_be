@@ -35,6 +35,7 @@
           <p class="user">Bienvenue, <br><%= current_user.email %></p>
         </div>
       <% else %>
+        <%= link_to "Devenez Hôte", owner_bookings_path, class: "btn-hote mr-5"%>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>

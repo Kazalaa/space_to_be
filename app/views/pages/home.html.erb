@@ -33,21 +33,15 @@
 
 <div class="search-container">
   <%= form_tag planets_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Planète"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-<%= form_tag planets_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Planète"
-  %>
-<% end %>
-
+    <div class="d-flex justify-content-center my-5">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Planète"
+      %>
+      <%= submit_tag "Search", class: "btn btn-dark search-btn ml-3" %>
+    </div>
+  <% end %>
 </div>
 
 <div class="sub-title">
@@ -57,13 +51,13 @@
 
 <div class="sabre">
 <div class="planets-grid container py-5">
-  <div class="planet-card" style="background-image: url('<%= image_path "tatooine.png" %>')">
+  <div class="planet-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "tatooine.png" %>')">
     <p>Tatooine</p>
   </div>
-  <div class="planet-card" style="background-image: url('<%= image_path "rendition1.jpg" %>')">
+  <div class="planet-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "rendition1.jpg" %>')">
     <p>Hoth</p>
   </div>
-  <div class="planet-card" style="background-image: url('<%= image_path "luke-skywalker-et-yoda.jpg" %>')">
+  <div class="planet-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "luke-skywalker-et-yoda.jpg" %>')">
     <p>Dagobah</p>
   </div>
 </div>

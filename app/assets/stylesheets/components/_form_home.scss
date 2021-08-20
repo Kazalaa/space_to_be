@@ -4,5 +4,14 @@
 }
 
 .search-btn {
-  border-radius: 10px;
+  border-radius: 18px;
+  background-image: linear-gradient(#FF784A, #F1CB4C);
+  padding: 5px 10px;
+  text-decoration: none;
+  box-shadow: 0 0 20px #FF784A;
+  color: #6c757d;
+}
+
+.search-btn:hover {
+  box-shadow: 0 0 30px #FF784A;
 }

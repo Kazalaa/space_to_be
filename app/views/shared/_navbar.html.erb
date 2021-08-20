@@ -11,17 +11,18 @@
   </button> %>
 
   <div>
-    <%= link_to "/planets", class: "all-planets" do %>
+    <%= link_to "/planets", class: "all-planets ml-5" do %>
       <span class="link-planets">Toutes nos planètes</span>
     <% end %>
   </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-2 mx-3">
+    <ul class="navbar-nav mr-2 mx-4">
       <% if user_signed_in? %>
-        <li class="nav-item active mx-3">
+        <li class="nav-item active mx-5">
           <%= link_to "Home", "/", class: "nav-link" %>
         </li>
+        <%= link_to "Devenez Hôte", owner_bookings_path, class: "btn-hote mr-5"%>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/melitapis", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -30,11 +31,10 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
-        <div class="user-name ml-3 mt-3">
+        <div class="user-name ml-5 mt-3">
           <p class="user">Bienvenue, <br><%= current_user.email %></p>
         </div>
       <% else %>
-        <%= link_to "Devenez Hôte", owner_bookings_path, class: "btn-hote"%>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>

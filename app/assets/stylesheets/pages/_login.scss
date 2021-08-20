@@ -16,3 +16,14 @@
 .card {
   opacity: 0.80;
 }
+
+.login-form-container {
+  .form-control {
+    width: 100%;
+  }
+  background-color: transparent;
+  color: white;
+  h2 {
+    color: white;
+  }
+}

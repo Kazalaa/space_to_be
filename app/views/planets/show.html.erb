@@ -1,13 +1,18 @@
-<h2><%= @planet.name %></h2>
-<p><%= @planet.price %></p>
-<p><%= @planet.rotation_period %></p>
-<p><%= @planet.diameter %></p>
-<p><%= @planet.climate %></p>
-<p><%= @planet.gravity %></p>
-<p><%= @planet.terrain %></p>
-<p><%= @planet.surface_water %></p>
-<p><%= @planet.population %></p>
-
-<button><%= link_to "retour", planets_path %></button>
-
-<%= link_to 'rent this planet', new_planet_booking_path(@planet)  %>
+<div class="container">
+  <div class="card text-center m-5 p-3">
+    <%= cl_image_tag(@planet.photo.key) %>
+    <div class="show-details">
+      <h2><%= @planet.name %></h2>
+      <p><%= @planet.price %></p>
+      <p><%= @planet.rotation_period %></p>
+      <p><%= @planet.diameter %></p>
+      <p><%= @planet.climate %></p>
+      <p><%= @planet.gravity %></p>
+      <p><%= @planet.terrain %></p>
+      <p><%= @planet.surface_water %></p>
+      <p><%= @planet.population %></p>
+      <%= link_to "retour", planets_path, class: 'btn' %>
+      <%= link_to 'Louer cette planète', new_planet_booking_path(@planet), class: 'btn'  %>
+    </div>
+  </div>
+</div>

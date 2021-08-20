@@ -1,15 +1,11 @@
 <div class="container">
-
-  <div class="card d-flex flex-column">
-  <h1 class='pt-3 text-center'>Réserver ma location sur <%= @planet.name %> </h1>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nostrum praesentium nulla explicabo animi quidem, magni eos, sit adipisci doloribus ipsum. Commodi, consectetur ab at corrupti ad facilis eveniet. Officiis?</p>
-  <%= simple_form_for [@planet, @booking] do |f| %>
-    <%= f.input :start_date, as: :date  %>
-    <%= f.input :end_date, as: :date %>
-    <%= f.button :submit %>
-  <% end %>
-
+  <div class="card d-flex flex-column text-center">
+    <h1 class='pt-3 text-center'>Réserver ma location sur <%= @planet.name %> </h1>
+    <p><%= @planet.name %> est la planète idéale pour votre prochain voyage, son climat parfait, ses splendides paysages offre un parfait déplanétisement!</p>
+    <%= simple_form_for [@planet, @booking] do |f| %>
+      <%= f.input :start_date, as: :date  %>
+      <%= f.input :end_date, as: :date %>
+      <%= f.button :submit, class: 'btn-hote mb-3' %>
+    <% end %>
   </div>
-
-
 </div>

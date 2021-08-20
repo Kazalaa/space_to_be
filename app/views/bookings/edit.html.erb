@@ -1,18 +1,18 @@
 <div class="container">
 
-  <div class="card d-flex flex-column">
+  <div class="card d-flex flex-column text-center">
     <h1 class='pt-3 text-center'>Modifier ma location sur <%= @planet.name %> </h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nostrum praesentium nulla explicabo animi quidem, magni eos, sit adipisci doloribus ipsum. Commodi, consectetur ab at corrupti ad facilis eveniet. Officiis?</p>
     <%= simple_form_for [@booking] do |f| %>
       <%= f.input :start_date, as: :date  %>
       <%= f.input :end_date, as: :date %>
-      <%= f.button :submit, class: "btn btn-primary text-center" %>
+      <%= f.button :submit, class: "btn-hote text-center mb-2" %>
     <% end %>
     <%= link_to "Supprimer ma réservation",
             booking_path(@booking),
             method: :delete,
             data: { confirm: "Are you sure?" },
-            class: 'btn btn-danger'%>
+            class: 'btn-hote mb-3'%>
   </div>
 
 

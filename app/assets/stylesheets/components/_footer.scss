@@ -1,5 +1,5 @@
 .footer {
-  background: black;
+  background: #1B1024;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,4 +37,19 @@ img {
   .footer-logo {
     width: 90px;
   }
+}
+.sabre-laser-footer{
+  position: absolute;
+  height: 5px;
+  background-color: white;
+  width: 100%;
+  // transform: translate(0%, -825%);
+  z-index: 0;
+  box-shadow:
+    0 0 10vw  0vw #FF784A,
+    0 0   2vw  0.2vw #FC884B,
+
+    inset 0 0 .5vw  .2vw #F99A4B,
+    inset 0 0 0.2vw  0.2vw #F5B24C,
+    inset 0 0 .25vw  0.2vw #F1CB4C;
 }

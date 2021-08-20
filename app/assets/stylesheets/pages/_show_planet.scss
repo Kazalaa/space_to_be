@@ -1,0 +1,50 @@
+#background-img{
+ background-image: image-url("backgroung.jpg");
+ background-position: center;
+ height: auto ;
+ width: 100%;
+ //max-width: 100%;
+ background-size: contain;
+}
+
+ .show-details {
+ float: right;
+  height: 420px;
+  width: 327px;
+
+}
+ .show-details-cards {
+  background-color: none;
+  color: white;
+ }
+
+.btn {
+    border-radius: 18px;
+    color: white;
+  background-color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    box-shadow: 0 0 20px #FF784A;
+
+  }
+
+.show-container{
+overflow: hidden;
+  height: auto;
+  //background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .show-planet-img {
+    border-radius: 50px;
+  }
+}
+
+h2{
+  font-family: "Star jedi";
+  font-weight: bold;
+}
+p{
+  font-weight: bold;
+}

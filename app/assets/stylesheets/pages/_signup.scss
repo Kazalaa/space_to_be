@@ -14,16 +14,6 @@
 
 .card {
   align-items: center;
-  opacity: 0.80
-
-}
-.btn-hote {
-    border-radius: 18px;
-    background-image: linear-gradient(#FF784A, #F1CB4C);
-    padding: 5px 10px;
-    text-decoration: none;
-    box-shadow: 0 0 20px #FF784A;
-  }
-.btn-hote:hover {
-  box-shadow: 0 0 40px #FF784A;
+  opacity: 0.80;
+  background-color: none;
 }

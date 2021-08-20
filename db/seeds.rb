@@ -47,6 +47,7 @@ user1 = User.create!(email: "reertr@truc.com", password: "azerrty")
 puts "user created"
 
 32.times do
+  puts "creating planet#{i}"
   url = "https://swapi.dev/api/planets/#{i}/"
   file = URI.open(FILES.sample)
   page_serialized = URI.open(url).read
@@ -62,6 +63,7 @@ puts "user created"
   price: pages['orbital_period'],
   user: user1)
   planet.photo.attach(io: file, filename: "planet", content_type: 'image/jpg')
+  puts "planet#{i} created"
    i += 1
  end
 

@@ -1,19 +1,19 @@
 <h1>New planet</h1>
+<div class="container">
 <ul>
-
-<%= simple_form_for(@planet) do |f| %>
-  <%= f.input :name, label: 'le nom de la planete' %>
-  <%= f.input :price, hint: "price should be in Palpacoin" %>
-  <%= f.input :rotation_period %>
-  <%= f.input :diameter %>
-  <%= f.input :climate %>
-  <%= f.input :gravity %>
-  <%= f.input :terrain %>
-  <%= f.input :surface_water %>
-  <%= f.input :population %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit :submit, class: "btn btn-primary" %>
-<% end %>
-
-<button><%= link_to "retour", planets_path %></button>
-</ul>
+  <%= simple_form_for(@planet) do |f| %>
+    <%= f.input :name, label: 'le nom de la planete' %>
+    <%= f.input :price, hint: "price should be in Palpacoin" %>
+    <%= f.input :rotation_period %>
+    <%= f.input :diameter %>
+    <%= f.input :climate %>
+    <%= f.input :gravity %>
+    <%= f.input :terrain %>
+    <%= f.input :surface_water %>
+    <%= f.input :population %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit :submit, class: "btn btn-primary" %>
+  <% end %>
+  <button><%= link_to "retour", planets_path %></button>
+  </ul>
+</div>

@@ -1,0 +1,63 @@
+.container-new{
+  background-image: image-url("backgroung.jpg");
+ background-position: center;
+ height: auto ;
+ width: 100%;
+ //max-width: 100%;
+ background-size: contain;
+ padding-top: 30px;
+ padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.container-new-planet{
+  background-color: white;
+  width: 800px;
+  height: auto;
+  opacity: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.title-new{
+  color: white;
+  padding: 30px;
+}
+
+// .form-group {
+//     margin-bottom: 1rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+.new_planet {
+  margin-top: 20px;
+  .form-group, .form-control-file {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.form-control{
+  width: 80%;
+}
+}
+
+.btn-create-planet{
+  border-radius: 18px;
+    background-image: linear-gradient(#FF784A, #F1CB4C);
+    padding: 5px 10px;
+    text-decoration: none;
+    box-shadow: 0 0 3px #FF784A;
+    width: 500px;
+  }
+.btn-create-planet:hover {
+  box-shadow: 0 0 10px #FF784A;
+}
